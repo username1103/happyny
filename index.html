@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="naver-site-verification" content="669b510f058153ee331821e40c0d57d5e3a1d284" />
+    <meta name="google-site-verification" content="h4Dj3piDCtJZ3zFqo791jZGRleSHjdqIoQ8abQbSqy0" />
+    <meta name="description" content="올해 당신의 운세는? 재미로 보는 2021년 당신의 운세 바로 확인하세요.">
+    <meta name="keywords" content="신년운세, 2021, 새해, 신년, 운세, 올해">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="재미로 보는 신년 운세">
+    <meta property="og:description" content="올해 당신의 운세는? 재미로 보는 2021년 당신의 운세 바로 확인하세요.">
+    <meta property="og:image" content="https://happyny.site/image/bookfront.png">
+    <meta property="og:url" content="https://happyny.site">
+    <title>재미로 보는 신년 운세</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="title">
+            <h1>재미로 보는 신년 운세</h1>
+            <img src="image/titleimage.png">
+        </div>
+        <div class="content">
+            <div class="help">
+                <img src='image/arrow1.png'><span>아래 책 페이지를 눌러주세요.</span>
+            </div>
+            <div class="bookContainer">
+                <img class="bookFront" src="image/bookfront.png">
+                <img class="bookSide" src="image/bookside.png">
+                <div class="paper frist" onclick="paperClick(this)">
+                </div>
+                <div class="paper second" onclick="paperClick(this)">
+                </div>
+                <div class="paper third" onclick="paperClick(this)">
+                </div>
+                <div class="paper fourth" onclick="paperClick(this)">
+                </div>
+                <div class="paper fifth" onclick="paperClick(this)">
+                </div>
+                <div class="paper sixth" onclick="paperClick(this)">
+                </div>
+                <div class="paper seventh" onclick="paperClick(this)">
+                </div>
+                <div class="paper last" onclick="paperClick(this)">
+                </div>
+                <img class="bookBack" src="image/bookback.png">
+            </div>
+            <div class="shareBtns">
+                <div class="kakao-share-container">
+                    <a class="kakao-share-btn" href="javascript:sendLink()" title="카카오톡 공유하기">
+                        <img class="logo"
+                            src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png">
+                    </a>
+                </div>
+                <div class="kakaostory-share-container">
+                </div>
+                <div class="fb-share-container">
+                    <a target="_blank" class="fb-share-btn" title="페이스북 공유하기"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhappyny.netlify.app%2F&amp;src=sdkpreparse">
+                        <img class="logo" src="image/facebooklogo.png">
+                    </a>
+                </div>
+                <div class="naver-share-container">
+                    <a title="네이버 공유하기" class="naver-share-btn" onclick="naverShare()">
+                        <img class="logo" src="image/naverlogo.png">
+                    </a>
+                </div>
+                <div class="link-copy-container">
+                    <a class="link-copy-btn" onclick="copy()" title="링크 복사">
+                        <img class="logo" src="image/copylogo.png">
+                    </a>
+                </div>
+            </div>
+            <a class="refresh-btn" href="index.html">다시하기</a>
+        </div>
+    </div>
+    <div class="ad-banners">
+        <div class="kakao-coupang">
+        </div>
+        <div class="coupang-dynamic">
+            <script src="https://ads-partners.coupang.com/g.js"></script>
+            <script>
+                new PartnersCoupang.G({ "id": 408399, "template": "carousel", "trackingCode": "AF0635815", "width": "100%", "height": "90" });
+            </script>
+        </div>
+    </div>
+
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <!-- // kakaotalk and kakaostory share -->
+    <script type="text/javascript">
+
+        Kakao.init('94b1436cbbd4b4dfe95760476b566b30');
+
+        Kakao.Link.createDefaultButton({
+
+            container: '.kakao-share-btn',
+            objectType: 'feed',
+            content: {
+                title: '2021 신년 운세',
+                description: '#재미로 보는 #신년운세 #운세맛집 #신축년 #2021 #연애운 #재물운 #행운 ',
+                imageUrl: 'https://happyny.site/image/kakaoshare.png',
+                link: {
+                    mobileWebUrl: 'https://happyny.site',
+                    webUrl: 'https://happyny.site'
+                }
+            },
+            buttons: [
+                {
+                    title: '웹으로 보기',
+                    link: {
+                        mobileWebUrl: 'https://happyny.site',
+                        webUrl: 'https://happyny.site'
+                    }
+                }
+            ]
+        });
+        Kakao.Story.createShareButton({
+            container: '.kakaostory-share-container',
+            url: 'https://happyny.site',
+            text: '2021 신년 운세 지금 바로 확인하세요.',
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Kakao AdFit setting -->
+    <script>
+        if (window.matchMedia('( min-width: 720px )').matches == true) {
+            document.querySelector('.kakao-coupang').innerHTML += '<ins class="kakao_ad_area" style="display:none;" data-ad-unit = "DAN-bIxljXuxmGahCb14" data-ad-width = "728" data-ad-height = "90"></ins> <a href="https://coupa.ng/bO8c3n" target="_blank" referrerpolicy="unsafe-url" style="display:block;"><img src="https://ads-partners.coupang.com/banners/408078?subId=&traceId=V0-301-879dd1202e5c73b2-I408078&w=728&h=90" alt=""></a>';
+        }
+        else if (window.matchMedia('( max-width: 720px )').matches == true && window.matchMedia('( min-width: 320px )').matches == true) {
+            document.querySelector('.kakao-coupang').innerHTML += '<ins class="kakao_ad_area" style="display:none;" data-ad-unit = "DAN-QlIu3ToUyLDIrg2Y" data-ad-width = "320" data-ad-height = "50"></ins> <a href="https://coupa.ng/bO8do5" target="_blank" referrerpolicy="unsafe-url" style="display:block;"><img src="https://ads-partners.coupang.com/banners/408117?subId=&traceId=V0-301-879dd1202e5c73b2-I408117&w=320&h=50" alt=""></a>';
+        }
+        else {
+            document.querySelector('.kakao-coupang').innerHTML += '<ins class="kakao_ad_area" style="display:none;" data-ad-unit = "DAN-vSQaDrjU272keheq" data-ad-width = "250" data-ad-height = "250"></ins> <a href="https://coupa.ng/bO8duV" target="_blank" referrerpolicy="unsafe-url" style="display:block;"><img src="https://ads-partners.coupang.com/banners/408119?subId=&traceId=V0-301-879dd1202e5c73b2-I408119&w=150&h=60" alt=""></a>';
+        }
+    </script>
+    <script src="click.js"></script>
+</body>
+
+</html>
