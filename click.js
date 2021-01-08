@@ -4,13 +4,11 @@ function paperClick(self) {
     help.style.color = 'whitesmoke';
     self.classList.add('selected');
     self.classList.remove('paper');
-    const addElem = document.createElement('div');
-    self.append(addElem)
     fetch('content').then(function (response) {
         response.text().then(function (text) {
-            const textList = text.split("\n");
+            const textList = text.split(",");
             const randomIndex = Math.floor(Math.random() * textList.length);
-            document.querySelector('.selected div').innerHTML = textList[randomIndex];
+            document.querySelector('.selected').style.backbroundImage = `url('selected/${textlist[randomIndex]}')`;
         })
     });
     self.onclick = null;
