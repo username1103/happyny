@@ -1,16 +1,39 @@
 function paperClick(self) {
-    let help = document.querySelector('.help');
-    help.removeChild(help.firstElementChild);
-    help.style.color = 'whitesmoke';
-    self.classList.add('selected');
-    self.classList.remove('paper');
     fetch('content').then(function (response) {
         response.text().then(function (text) {
             const textList = text.split(",");
             const randomIndex = Math.floor(Math.random() * textList.length);
             document.querySelector('.selected').style.backgroundImage = `url('selected/${textList[randomIndex]}')`;
+            Kakao.Link.createDefaultButton({
+
+                container: '.kakao-share-btn',
+                objectType: 'feed',
+                content: {
+                    title: '2021 신년 운세',
+                    description: '#재미로 보는 #신년운세 #운세맛집 #신축년 #2021 #연애운 #재물운 #행운 ',
+                    imageUrl: `https://happyny.site/selected/${textList[randomIndex]}`,
+                    link: {
+                        mobileWebUrl: 'https://happyny.site',
+                        webUrl: 'https://happyny.site'
+                    }
+                },
+                buttons: [
+                    {
+                        title: '웹으로 보기',
+                        link: {
+                            mobileWebUrl: 'https://happyny.site',
+                            webUrl: 'https://happyny.site'
+                        }
+                    }
+                ]
+            });
         })
     });
+    let help = document.querySelector('.help');
+    help.removeChild(help.firstElementChild);
+    help.style.color = 'whitesmoke';
+    self.classList.add('selected');
+    self.classList.remove('paper');
     self.onclick = null;
 }
 
