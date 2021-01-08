@@ -9,8 +9,8 @@ function paperClick(self) {
                 container: '.kakao-share-btn',
                 objectType: 'feed',
                 content: {
-                    title: '2021 신년 운세',
-                    description: '#재미로 보는 #신년운세 #운세맛집 #신축년 #2021 #연애운 #재물운 #행운 ',
+                    title: '재미로 보는 신년 운세',
+                    description: '올해 당신의 운세는? 재미로 보는 2021년 당신의 운세 바로 확인하세요.',
                     imageUrl: `https://happyny.site/selected/${textList[randomIndex]}`,
                     link: {
                         mobileWebUrl: 'https://happyny.site',
@@ -55,7 +55,7 @@ function copy() {
 
 function naverShare() {
     let url = encodeURI(encodeURIComponent("happyny.netlify.com"));
-    let title = encodeURI("2021 신년 운세");
+    let title = encodeURI("재미로 보는 신년 운세");
     const shareURL = "https://share.naver.com/web/shareView.nhn?url=" + url + "&title=" + title;
     window.open(shareURL);
 }
