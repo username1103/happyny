@@ -8,7 +8,7 @@ function paperClick(self) {
         response.text().then(function (text) {
             const textList = text.split(",");
             const randomIndex = Math.floor(Math.random() * textList.length);
-            document.querySelector('.selected').style.backbroundImage = `url('selected/${textlist[randomIndex]}')`;
+            document.querySelector('.selected').style.backbroundImage = `url('selected/${textList[randomIndex]}')`;
         })
     });
     self.onclick = null;
