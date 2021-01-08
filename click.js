@@ -4,31 +4,8 @@ function paperClick(self) {
             let textList = text.split(",");
             let randomIndex = Math.floor(Math.random() * textList.length);
             document.querySelector('.selected').style.backgroundImage = `url('selected/${textList[randomIndex]}')`;
-            Kakao.Link.createDefaultButton({
-
-                container: '.kakao-share-btn',
-                objectType: 'feed',
-                content: {
-                    title: '재미로 보는 신년 운세',
-                    description: '올해 당신의 운세는? 재미로 보는 2021년 당신의 운세 바로 확인하세요.',
-                    imageUrl: `https://happyny.site/selected/${textList[randomIndex]}`,
-                    imageWidth: 314,
-                    imageHeight: 413,
-                    link: {
-                        mobileWebUrl: 'https://happyny.site',
-                        webUrl: 'https://happyny.site'
-                    }
-                },
-                buttons: [
-                    {
-                        title: '웹으로 보기',
-                        link: {
-                            mobileWebUrl: 'https://happyny.site',
-                            webUrl: 'https://happyny.site'
-                        }
-                    }
-                ]
-            });
+            kakaotemp.content.imageUrl = `https://happyny.site/selected/${textList[randomIndex]}`;
+            Kakao.Link.createDefaultButton(kakaotemp);
         })
     });
     let help = document.querySelector('.help');
@@ -38,7 +15,11 @@ function paperClick(self) {
     self.classList.remove('paper');
     self.onclick = null;
 }
-
+function kakaotalkShare(){
+    if(document.querySelector('.selected') == null){
+        Kakao.Link.createDefaultButton(kakaotemp);
+    }
+}
 function pageReload() {
     location.reload();
 }

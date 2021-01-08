@@ -53,7 +53,7 @@
             </div>
             <div class="shareBtns">
                 <div class="kakao-share-container">
-                    <a class="kakao-share-btn" title="카카오톡 공유하기">
+                    <a class="kakao-share-btn" onclick="kakaotalkShare()" title="카카오톡 공유하기">
                         <img class="logo"
                             src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png">
                     </a>
@@ -95,8 +95,7 @@
     <script type="text/javascript">
 
         Kakao.init('94b1436cbbd4b4dfe95760476b566b30');
-
-        Kakao.Link.createDefaultButton({
+        let kakaotemp = {
 
             container: '.kakao-share-btn',
             objectType: 'feed',
@@ -120,7 +119,7 @@
                     }
                 }
             ]
-        });
+        };
         Kakao.Story.createShareButton({
             container: '.kakaostory-share-container',
             url: 'https://happyny.site',
