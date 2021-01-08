@@ -251,12 +251,7 @@ body {
         height    : calc(4.37*5.9em);
 
     }
-
-    .selected div {
-        font-size: 1.2em;
-        padding  : 13em 0.75em 0.75em 0.75em;
-    }
-
+    
     .logo {
         width        : 2.5em;
         height       : 2.5em;
@@ -309,11 +304,6 @@ body {
         display   : inline-block;
         width     : calc(3.32*4em);
         height    : calc(4.37*4em);
-    }
-
-    .selected div {
-        font-size: 0.8em;
-        padding  : 13em 0.75em 0.75em 0.75em;
     }
 
     .kakao-share-container,
