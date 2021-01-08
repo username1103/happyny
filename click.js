@@ -16,6 +16,10 @@ function paperClick(self) {
     self.onclick = null;
 }
 
+function pageReload() {
+    location.reload();
+}
+
 function copy() {
     const tempElem = document.createElement('textarea');
     tempElem.value = 'happyny.site';

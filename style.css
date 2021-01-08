@@ -283,14 +283,15 @@ body {
 
     .refresh-btn {
         font-size: 1.5em;
+        cursor   : pointer;
     }
 }
 
 /* deviec-width가 700px이하면 */
 @media(max-device-width:700px) and (min-device-width:330px) {
     .main {
-        height: 80vh;
-        padding:10vh 0;
+        height : 80vh;
+        padding: 10vh 0;
     }
 
     .title h1 {
@@ -352,8 +353,8 @@ body {
 
 @media(max-device-width:330px) {
     .main {
-        height: 80vh;
-        padding:10vh 0;
+        height : 80vh;
+        padding: 10vh 0;
     }
 
     .title h1 {
