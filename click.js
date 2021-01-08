@@ -1,8 +1,8 @@
 function paperClick(self) {
     fetch('content').then(function (response) {
         response.text().then(function (text) {
-            const textList = text.split(",");
-            const randomIndex = Math.floor(Math.random() * textList.length);
+            let textList = text.split(",");
+            let randomIndex = Math.floor(Math.random() * textList.length);
             document.querySelector('.selected').style.backgroundImage = `url('selected/${textList[randomIndex]}')`;
             Kakao.Link.createDefaultButton({
 
