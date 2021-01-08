@@ -56,7 +56,7 @@ function copy() {
 }
 
 function naverShare() {
-    let url = encodeURI(encodeURIComponent("happyny.netlify.com"));
+    let url = encodeURI(encodeURIComponent("happyny.site"));
     let title = encodeURI("재미로 보는 신년 운세");
     const shareURL = "https://share.naver.com/web/shareView.nhn?url=" + url + "&title=" + title;
     window.open(shareURL);
