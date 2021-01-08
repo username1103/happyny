@@ -12,6 +12,8 @@ function paperClick(self) {
                     title: '재미로 보는 신년 운세',
                     description: '올해 당신의 운세는? 재미로 보는 2021년 당신의 운세 바로 확인하세요.',
                     imageUrl: `https://happyny.site/selected/${textList[randomIndex]}`,
+                    imageWidth: 314,
+                    imageHeight: 413,
                     link: {
                         mobileWebUrl: 'https://happyny.site',
                         webUrl: 'https://happyny.site'
