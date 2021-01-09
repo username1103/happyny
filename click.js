@@ -15,9 +15,11 @@ function paperClick(self) {
     self.classList.remove('paper');
     self.onclick = null;
 }
-function kakaotalkShare(){
+function kakaotalkShare(self){
     if(document.querySelector('.selected') == null){
         Kakao.Link.createDefaultButton(kakaotemp);
+        self.onclick= null;
+        self.click();
     }
 }
 function pageReload() {
