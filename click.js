@@ -3,7 +3,7 @@ function bookSelect(self) {
         response.text().then(function (text) {
             let textList = text.split(",");
             let randomIndex = Math.floor(Math.random() * textList.length);
-            let selected = document.querySelector('.on');
+            let selected = document.querySelector('.selected');
             selected.style.backgroundImage = `url('selected/${textList[randomIndex]}')`;
             selected.style.zIndex = "2";
             selected.classList.add("on");
