@@ -1,9 +1,10 @@
-function paperClick(self) {
+function bookSelect(self) {
     fetch('content').then(function (response) {
         response.text().then(function (text) {
             let textList = text.split(",");
             let randomIndex = Math.floor(Math.random() * textList.length);
             document.querySelector('.selected').style.backgroundImage = `url('selected/${textList[randomIndex]}')`;
+            document.querySelector('.selected').style.zIndex = '2';
             kakaotemp.content.imageUrl = `https://happyny.site/selected/${textList[randomIndex]}`;
             Kakao.Link.createDefaultButton(kakaotemp);
         })
@@ -11,8 +12,6 @@ function paperClick(self) {
     let help = document.querySelector('.help');
     help.removeChild(help.firstElementChild);
     help.style.color = 'whitesmoke';
-    self.classList.add('selected');
-    self.classList.remove('paper');
     self.onclick = null;
 }
 function kakaotalkShare(self){
