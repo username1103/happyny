@@ -8,8 +8,6 @@ function bookSelect(self) {
             selected.style.zIndex = '2';
             selected.style.width = "100%";
             selected.style.height = "100%";
-            selected.style.left = '0';
-            selected.style.top = '0'
             kakaotemp.content.imageUrl = `https://happyny.site/selected/${textList[randomIndex]}`;
             Kakao.Link.createDefaultButton(kakaotemp);
         })

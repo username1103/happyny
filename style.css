@@ -20,7 +20,8 @@ body {
 }
 
 .bookContainer {
-    position: relative;
+    position  : relative;
+    text-align: center;
 }
 
 .book {
@@ -35,7 +36,7 @@ body {
 }
 
 .selected {
-    position       : absolute;
+    position       : relative;
     background-size: cover;
     transition     : 2s;
 }
