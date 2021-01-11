@@ -38,6 +38,8 @@ body {
     position       : absolute;
     left           : 50%;
     top            : 50%;
+    width          : 10%;
+    height         : 10%;
     background-size: cover;
     transition     : width 2s, height 2s;
 }
