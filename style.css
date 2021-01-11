@@ -37,21 +37,21 @@ body {
 
 .selected {
     position       : absolute;
-    left           : 50%;
-    top            : 50%;
+    left           : 0%;
+    top            : 0%;
     background-size: cover;
     transition     : 2s;
 }
-
-.selected:hover {
-    transform: scale(1.01);
-}
-
 .on{
-    transform: translate(-50%,-50%);
+
     width:100%;
     height:100%;
 }
+
+.on:hover {
+    transform: scale(1.01);
+}
+
 
 .shareBtns {
     margin-top: 1.5em;
