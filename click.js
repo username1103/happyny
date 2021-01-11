@@ -3,8 +3,13 @@ function bookSelect(self) {
         response.text().then(function (text) {
             let textList = text.split(",");
             let randomIndex = Math.floor(Math.random() * textList.length);
-            document.querySelector('.selected').style.backgroundImage = `url('selected/${textList[randomIndex]}')`;
-            document.querySelector('.selected').style.zIndex = '2';
+            let selected = document.querySelector('.selected');
+            selected.style.backgroundImage = `url('selected/${textList[randomIndex]}')`;
+            selected.style.zIndex = '2';
+            selected.style.width = "100%";
+            selected.style.height = "100%";
+            selected.style.left = '0';
+            selected.style.top = '0'
             kakaotemp.content.imageUrl = `https://happyny.site/selected/${textList[randomIndex]}`;
             Kakao.Link.createDefaultButton(kakaotemp);
         })
@@ -14,10 +19,10 @@ function bookSelect(self) {
     help.style.color = 'whitesmoke';
     self.onclick = null;
 }
-function kakaotalkShare(self){
-    if(document.querySelector('.selected') == null){
+function kakaotalkShare(self) {
+    if (document.querySelector('.selected') == null) {
         Kakao.Link.createDefaultButton(kakaotemp);
-        self.onclick= null;
+        self.onclick = null;
         self.click();
     }
 }
