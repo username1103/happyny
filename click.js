@@ -5,7 +5,7 @@ function bookSelect(self) {
             let randomIndex = Math.floor(Math.random() * textList.length);
             let selected = document.querySelector('.selected');
             selected.style.backgroundImage = `url('selected/${textList[randomIndex]}')`;
-            selected.style.zIndex = '2';
+            selected.classList.add("on");
             kakaotemp.content.imageUrl = `https://happyny.site/selected/${textList[randomIndex]}`;
             Kakao.Link.createDefaultButton(kakaotemp);
         })
