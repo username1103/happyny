@@ -1,62 +1,61 @@
 body {
-    margin    : 0;
-    text-align: center;
+  margin: 0;
+  text-align: center;
 }
 
 .main {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 .title h1 {
-    display: inline-block;
+  display: inline-block;
 }
 
 .title img {
-    position: absolute;
+  position: absolute;
 }
 
 .title {
-    position: relative;
+  position: relative;
 }
 
 .bookContainer {
-    position: relative;
+  position: relative;
 }
 
 .book {
-    background-image: url('image/book.png');
-    background-size : cover;
-    position        : absolute;
-    cursor          : pointer;
-    width           : 100%;
-    height          : 100%;
-    left            : 0;
-    z-index         : 1;
+  background-image: url("image/book.png");
+  background-size: cover;
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 1;
 }
 
 .selected {
-    position       : absolute;
-    left           : 50%;
-    top            : 50%;
-    width          : 10%;
-    height         : 10%;
-    background-size: cover;
-    transition     : width 2s, height 2s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10%;
+  height: 10%;
+  background-size: cover;
+  transition: width 2s, height 2s;
 }
 
 .on {
-    transform: translate(-50%, -50%);
-    width    : 100%;
-    height   : 100%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
 }
 
 .on:hover {
-    transform: translate(-50%, -50%), scale(1.06);
+  transform: translate(-50%, -50%), scale(1.06);
 }
 
-
 .shareBtns {
-    margin-top: 1.5em;
+  margin-top: 1.5em;
 }
 
 .kakao-share-container,
@@ -64,12 +63,12 @@ body {
 .fb-share-container,
 .naver-share-container,
 .link-copy-container {
-    display         : inline-block;
-    width           : 3em;
-    height          : 3em;
-    margin          : 0px 5px 5px 2px;
-    border-radius   : 50%;
-    background-color: rgb(250, 225, 0);
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  margin: 0px 5px 5px 2px;
+  border-radius: 50%;
+  background-color: rgb(250, 225, 0);
 }
 
 .kakao-share-container:hover,
@@ -77,244 +76,241 @@ body {
 .fb-share-container:hover,
 .naver-share-container:hover,
 .link-copy-container:hover {
-    transform : translateY(-5px);
-    transition: 0.3s;
+  transform: translateY(-5px);
+  transition: 0.3s;
 }
 
 .kakaostory-share-container {
-    background-color: rgb(254, 175, 0);
+  background-color: rgb(254, 175, 0);
 }
 
 .fb-share-container {
-    background-color: rgb(68, 114, 196);
+  background-color: rgb(68, 114, 196);
 }
 
 .naver-share-container {
-    cursor          : pointer;
-    background-color: rgb(1, 198, 95);
+  cursor: pointer;
+  background-color: rgb(1, 198, 95);
 }
 
 .link-copy-container {
-    cursor          : pointer;
-    background-color: slategray;
+  cursor: pointer;
+  background-color: slategray;
 }
 
 .kakao-share-btn {
-    cursor : pointer;
-    padding: 0.25em;
-    display: inline-block;
+  cursor: pointer;
+  padding: 0.25em;
+  display: inline-block;
 }
 
 .kakaostory-share-container a {
-    display: inline-block;
-    padding: 0.25em;
+  display: inline-block;
+  padding: 0.25em;
 }
 
 .fb-share-btn {
-    padding: 0.25em;
-    display: inline-block;
+  padding: 0.25em;
+  display: inline-block;
 }
 
 .naver-share-btn {
-    padding: 0.25em;
-    display: inline-block;
+  padding: 0.25em;
+  display: inline-block;
 }
 
 .link-copy-btn {
-    padding: 0.25em;
-    display: inline-block;
+  padding: 0.25em;
+  display: inline-block;
 }
 
 .refresh-btn {
-    display             : inline-block;
-    text-decoration-line: none;
-    color               : white;
-    background-color    : royalblue;
-    margin              : 1em 0em;
-    padding             : 0.2em 1em;
-    border              : groove;
-    border-radius       : 1em;
+  display: inline-block;
+  text-decoration-line: none;
+  color: white;
+  background-color: royalblue;
+  margin: 1em 0em;
+  padding: 0.2em 1em;
+  border: groove;
+  border-radius: 1em;
 }
 
-
 /* device-width가 700px 이상이면 */
-@media(min-device-width:700px) {
+@media (min-device-width: 700px) {
+  .main,
+  .ad-banners {
+    width: 728px;
+    margin: auto;
+  }
 
-    .main,
-    .ad-banners {
-        width : 728px;
-        margin: auto;
-    }
+  .title {
+    padding: 2em 0;
+    border-bottom: 3px solid black;
+  }
 
-    .title {
-        padding      : 2em 0;
-        border-bottom: 3px solid black;
-    }
+  .title img {
+    margin-left: 1em;
+    top: 3em;
+    width: 4em;
+    transform: rotate(10deg);
+  }
 
-    .title img {
-        margin-left: 1em;
-        top        : 3em;
-        width      : 4em;
-        transform  : rotate(10deg);
-    }
+  .help {
+    margin-top: 1.5em;
+    font-size: 0.9em;
+  }
 
-    .help {
-        margin-top: 1.5em;
-        font-size : 0.9em;
-    }
+  .help img {
+    height: 1em;
+  }
 
-    .help img {
-        height: 1em;
-    }
+  .bookContainer {
+    display: inline-block;
+    margin-top: 0.5em;
+    width: calc(3.32 * 5.9em);
+    height: calc(4.37 * 5.9em);
+  }
 
-    .bookContainer {
-        display   : inline-block;
-        margin-top: 0.5em;
-        width     : calc(3.32*5.9em);
-        height    : calc(4.37*5.9em);
-    }
+  .logo {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+  }
 
-    .logo {
-        width        : 2.5em;
-        height       : 2.5em;
-        border-radius: 50%;
-    }
+  .kakaostory-share-container a img {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+  }
 
-    .kakaostory-share-container a img {
-        width        : 2.5em;
-        height       : 2.5em;
-        border-radius: 50%;
-    }
-
-    .refresh-btn {
-        font-size: 1.5em;
-        cursor   : pointer;
-    }
+  .refresh-btn {
+    font-size: 1.5em;
+    cursor: pointer;
+  }
 }
 
 /* deviec-width가 700px이하면 */
-@media(max-device-width:700px) and (min-device-width:330px) {
-    .main {
-        height : 80vh;
-        padding: 10vh 0;
-    }
+@media (max-device-width: 700px) and (min-device-width: 330px) {
+  .main {
+    height: 80vh;
+    padding: 10vh 0;
+  }
 
-    .title h1 {
-        padding  : 1.5em 0;
-        margin   : 0;
-        font-size: 1.5em;
-    }
+  .title h1 {
+    padding: 1.5em 0;
+    margin: 0;
+    font-size: 1.5em;
+  }
 
-    .title img {
-        margin-left: 0.3em;
-        top        : 2.5em;
-        width      : 2em;
-        transform  : rotate(10deg);
-    }
+  .title img {
+    margin-left: 0.3em;
+    top: 2.5em;
+    width: 2em;
+    transform: rotate(10deg);
+  }
 
-    .help {
-        font-size: 0.7em;
-    }
+  .help {
+    font-size: 0.7em;
+  }
 
-    .help img {
-        height: 1em;
-    }
+  .help img {
+    height: 1em;
+  }
 
-    .bookContainer {
-        margin-top: 0.5em;
-        display   : inline-block;
-        width     : calc(3.32*4em);
-        height    : calc(4.37*4em);
-    }
+  .bookContainer {
+    margin-top: 0.5em;
+    display: inline-block;
+    width: calc(3.32 * 4em);
+    height: calc(4.37 * 4em);
+  }
 
-    .kakao-share-container,
-    .kakaostory-share-container,
-    .fb-share-container,
-    .naver-share-container,
-    .link-copy-container {
-        width : 2.5em;
-        height: 2.5em;
+  .kakao-share-container,
+  .kakaostory-share-container,
+  .fb-share-container,
+  .naver-share-container,
+  .link-copy-container {
+    width: 2.5em;
+    height: 2.5em;
+  }
 
-    }
+  .logo {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+  }
 
-    .logo {
-        width        : 2em;
-        height       : 2em;
-        border-radius: 50%;
-    }
-
-    .kakaostory-share-container a img {
-        width        : 2em;
-        height       : 2em;
-        border-radius: 50%;
-    }
+  .kakaostory-share-container a img {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+  }
 }
 
-@media(max-device-width:330px) {
-    .main {
-        height : 80vh;
-        padding: 10vh 0;
-    }
+@media (max-device-width: 330px) {
+  .main {
+    height: 80vh;
+    padding: 10vh 0;
+  }
 
-    .title h1 {
-        padding  : 1.5em 0;
-        margin   : 0;
-        font-size: 1.2em;
-    }
+  .title h1 {
+    padding: 1.5em 0;
+    margin: 0;
+    font-size: 1.2em;
+  }
 
-    .title img {
-        margin-left: 0.3em;
-        top        : 1.8em;
-        width      : 2em;
-        transform  : rotate(10deg);
-    }
+  .title img {
+    margin-left: 0.3em;
+    top: 1.8em;
+    width: 2em;
+    transform: rotate(10deg);
+  }
 
-    .help {
-        font-size: 0.3em;
-    }
+  .help {
+    font-size: 0.3em;
+  }
 
-    .help img {
-        height: 2em;
-    }
+  .help img {
+    height: 2em;
+  }
 
-    .bookContainer {
-        margin-top: 0.5em;
-        width     : calc(3.32 * 3em);
-        height    : calc(4.37 * 3em);
-        display   : inline-block
-    }
+  .bookContainer {
+    margin-top: 0.5em;
+    width: calc(3.32 * 3em);
+    height: calc(4.37 * 3em);
+    display: inline-block;
+  }
 
-    .bookSide {
-        width: 14%;
-    }
+  .bookSide {
+    width: 14%;
+  }
 
-    .selected div {
-        font-size: 0.6em;
-        padding  : 13em 0.75em 0.75em 0.75em;
-    }
+  .selected div {
+    font-size: 0.6em;
+    padding: 13em 0.75em 0.75em 0.75em;
+  }
 
-    .kakao-share-container,
-    .kakaostory-share-container,
-    .fb-share-container,
-    .naver-share-container,
-    .link-copy-container {
-        width : 2em;
-        height: 2em;
-    }
+  .kakao-share-container,
+  .kakaostory-share-container,
+  .fb-share-container,
+  .naver-share-container,
+  .link-copy-container {
+    width: 2em;
+    height: 2em;
+  }
 
-    .logo {
-        width        : 1.5em;
-        height       : 1.5em;
-        border-radius: 50%;
-    }
+  .logo {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+  }
 
-    .kakaostory-share-container a img {
-        width        : 1.5em;
-        height       : 1.5em;
-        border-radius: 50%;
-    }
+  .kakaostory-share-container a img {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+  }
 
-    .refresh-btn {
-        font-size: 0.75em;
-    }
+  .refresh-btn {
+    font-size: 0.75em;
+  }
 }
