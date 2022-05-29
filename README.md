@@ -1,6 +1,6 @@
 # happyny.site
 * * *
-**My web site** : [happy new year](https://happyny.site)
+**My web site** : [happy new year](https://happyny.netlify.app/)
 
 ## 프로젝트 계획 이유
 > 이 프로젝트는 제가 처음으로 제작해본 사이트 입니다. 2021년을 맞아 새해기념으로 이 웹사이트를 제작했습니다. 처음 접해보는 HTML, CSS, JavaScript를 이용해 제작했고 이미지를 디자인해주는
